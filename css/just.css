@@ -1,0 +1,116 @@
+@charset "UTF-8";
+
+* {margin: 0; padding: 0;}
+a {text-decoration: none; color: #333;}
+li {list-style: none;}
+
+
+
+#popup {width: 300px; height: 400px; position: absolute; background: #222; left: 50%; top: 50%; transform: translate(-50%-50%); z-index: 7; display: none;}
+#popup p {color: #fff; padding: 30px;}
+#popup button {position: absolute;right: 30px; bottom: 30px; padding: 10px 20px; cursor: pointer;}
+
+
+
+#wrap {width: 1200px; margin: 0 auto; }
+header {width: 100%; height: 100px; position: relative;}
+#visual {width: 100%; height: 300px; background: #eee;position: relative; overflow: hidden;}
+section {width: 100%; height: 200px; }
+footer {width: 100%; height: 100px; background: #444;} 
+
+
+header h1 {float: left; margin-top: 30px;}
+header nav {float: right; width: 800px; height: 100px; background: #ddd;}
+header >nav > ul > li {float: left; width: 200px; height: 100px; line-height: 100px; text-align: center;font-size: 18px; position: relative;}
+header >nav > ul > li a {display: block;}
+
+header nav .lnb {position: absolute; width: 100%; background: #333; overflow: hidden; transition: .5s; z-index: 3; max-height: 0; }
+header nav .lnb li {height: 50px; line-height: 50px;} 
+header nav .lnb li a {color: #fff;}
+
+header nav li:hover {background: orange;}
+
+header > nav > ul > li:hover .lnb {max-height: 200px;}
+/* lnb 힌개만 나옴 */
+
+/* header nav:hover > ul > li .lnb {height: 200px;} */
+/* lnb 4개가 같이 나옴 */
+
+
+
+
+/* header .lnb_bg {position: absolute; width: 100%; background: #333; height: 0px; top: 100px; transition: 0.5s;} */
+/* header nav .lnb에 z-index: 3추가하고  lnb 통짜로 나옴 */
+/* header nav:hover ~ .lnb_bg {height: 200px;} */
+/* lnb 통짜로 나옴 */
+
+
+
+/* #visual ul {width: 4800px; animation: slide_left 9s linear infinite;} */
+
+/* @keyframes slide_left{ 
+    0% {margin-left: 0;}
+
+    22% {margin-left: 0;}
+    33% {margin-left: -1200px;}
+
+    55% {margin-left: -1200px;}
+    66% {margin-left: -2400px;}
+
+    88% {margin-left: -2400px;}
+    100% {margin-left: -3600px;} 
+} */
+/* #visual ul li {width: 1200px; height: 300px; float: left;} */
+ 
+
+#visual ul {width: 1200px; animation: slide_top 9s linear infinite; position: absolute;}
+
+@keyframes slide_top{
+    0% {top: 0;}
+
+    22% {top: 0;}
+    33% {top: -300px;}
+
+    55% {top: -300px;}
+    66% {top: -600px;}
+
+    88% {top: -600px;}
+    100% {top: -900px;}
+} 
+#visual ul li {width: 1200px; height: 300px;float: left;}
+/* #visual에 position: relative; overflow: hidden; 넣음*/
+
+
+section > div {width: 400px; height: 200px; float: left; box-sizing: border-box; border: 1px solid; position: relative;}
+section .h_box {height: 50px;}
+section .h_box h2 {float: left; width: 100px; height: 50px;line-height: 50px; font-size: 18px; text-align: center;}
+section .h_box h2 a {display: block;}
+section .h_box .h_gallery a {color: #777;}
+
+section .cont_box {width: 100%; height: 150px; background: #eee;}
+
+.board_box .cont_box .notice { position: absolute; width: 100%;}
+.board_box .cont_box .notice li {width: 100%; height: 30px; line-height: 30px; background: #ccc; border-bottom:  1px solid #aaa;}
+.board_box .cont_box .notice li p {float: left; width: 300px; text-indent: 10px;}
+.board_box .cont_box .notice li span {float: right; width: 90px; }
+
+
+
+.board_box .cont_box .gallery {position: absolute; text-align: center; width: 100%; display: none;} 
+.board_box .cont_box .gallery li {width: 100px; height: 100px; display: inline-block; background: #ccc; margin-top: 25px;}
+
+
+
+.banner_box .cont_box li {width: 300px; height: 40px; margin: 0 auto 10px auto; background: #ccc;}
+
+.baro_box .cont_box {text-align: center;}
+.baro_box .cont_box li {width: 90px; height: 90px; display: inline-block; background: #ccc; margin-top: 30px;}
+
+
+
+
+
+footer h1 {width: 200px; height: 40px; float: left; margin-top: 30px;}
+footer address {width: 600px; float: left; margin-left: 50px; margin-top: 15px; color: #fff; font-style: normal;}
+footer .sns_box {width: 300px; height: 70px; float: right; margin-top: 15px; text-align: center;}
+footer .sns_box a {display: inline-block; width: 70px; height: 70px; margin: 0 5px; background: #000; border: 1px solid #fff;}

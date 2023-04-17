@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JUST쇼핑몰</title>
+    <link rel="stylesheet" href="css/just.css">
+</head>
+<body>
+    <!-- #wrap>(header>(h1>a)+(nav>ul>li*4>a+ul.lnb>li))+(#visual>ul>li*3>a)+(section>div*3>h2+ul>li*3>a)+(footer>h1+address+.sns>a*3) -->
+
+    <div id="popup">
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestiae modi adipisci doloribus consequatur fugit ex, dolorum quaerat repudiandae quae facilis. Quo iusto sint dolorem quas neque magnam adipisci iure laboriosam!</p>
+        <button type="button">닫기</button>
+    </div>
+
+    <div id="wrap">
+        <header>
+            <h1>
+                <a href="#"><img src="images/logo.png" alt="just쇼핑몰 로고"></a>
+            </h1>
+
+            <nav>
+                <ul>
+                    <li><a href="#">탑</a>
+                        <ul class="lnb">
+                            <li><a href="#">블라우스</a></li>
+                            <li><a href="#">티</a></li>
+                            <li><a href="#">셔츠</a></li>
+                            <li><a href="#">니트</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#">아우터</a>
+                        <ul class="lnb">
+                            <li><a href="#">자켓</a></li>
+                            <li><a href="#">코트</a></li>
+                            <li><a href="#">가디건</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#">팬츠</a>
+                        <ul class="lnb">
+                            <li><a href="#">청바지</a></li>
+                            <li><a href="#">짧은바지</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#">악세사리</a>
+                        <ul class="lnb">
+                            <li><a href="#">괴고리</a></li> 
+                        </ul>
+                    </li>
+                </ul>
+            </nav>
+
+            <div class="lnb_bg"></div>
+        </header>
+
+
+
+        <div id="visual">
+            <ul>
+                <li><a href="#"><img src="images/slide1.png" alt=""></a></li>
+                <li><a href="#"><img src="images/slide2.png" alt=""></a></li>
+                <li><a href="#"><img src="images/slide3.png" alt=""></a></li>
+                <li><a href="#"><img src="images/slide1.png" alt=""></a></li>
+            </ul>
+        </div>
+        
+        
+        
+        <section>
+            <div class="board_box">
+                <div class="h_box">
+                    <h2 class="notice"><a href="#">공지사항</a></h2>
+                    <h2 class="gallery"><a href="#">갤러리</a></h2>
+                </div>
+                <div class="cont_box">
+                    <ul class="notice">
+                        <li>
+                            <a href="#">
+                                <p>Lorem ipsum dolor sit amet.</p>
+                                <span class="date">2023.01.16</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <p>Lorem ipsum dolor sit amet.</p>
+                                <span class="date">2023.01.16</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <p>Lorem ipsum dolor sit amet.</p>
+                                <span class="date">2023.01.16</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <p>Lorem ipsum dolor sit amet.</p>
+                                <span class="date">2023.01.16</span>
+                            </a>
+                        </li>
+                    </ul>
+                    
+                    <ul class="gallery">
+                        <li><a href="#"></a></li>
+                        <li><a href="#"></a></li>
+                        <li><a href="#"></a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="banner_box">
+                <div class="h_box">
+                    <h2><a href="#">배너</a></h2>
+                </div>
+                <div class="cont_box">
+                    <ul>
+                        <li><a href="#"></a></li>
+                        <li><a href="#"></a></li>
+                        <li><a href="#"></a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="baro_box">
+                <div class="h_box">
+                    <h2><a href="#">바로가기</a></h2>
+                </div>
+                <div class="cont_box">
+                    <ul>
+                        <li><a href="#"></a></li>
+                        <li><a href="#"></a></li>
+                        <li><a href="#"></a></li>
+                        <li><a href="#"></a></li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+        
+        
+        
+        <footer>
+            <h1><img src="images/logo_footer.png" alt=""></h1>
+
+            <address>
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facere, sequi quas quae alias, eveniet reiciendis iure itaque illum architecto cupiditate, soluta dolores doloribus pariatur dolore incidunt magni perferendis dolor laudantium?
+            </address>
+
+            <div class="sns_box">
+                <a href="#"></a>
+                <a href="#"></a>
+                <a href="#"></a>
+            </div>
+        </footer>
+    </div>
+
+
+
+    <script src="script/jquery-3.6.3.min.js"></script>
+    <script>
+        var popup = document.querySelector('#popup')
+        popup.style.display = 'block';
+        popup.style.color = 'red';
+        popup.style.background = 'blue';
+
+
+        $('#popup').css({display:'block', color:'red', background:'blue'})
+
+        $('.notice li').eq(0).click(function(){
+            $('#popup').show();
+        });
+
+        $('#popup button').click(function(){
+            $('#popup').hide();
+        });
+
+
+        $('.h_box h2').click(function(){
+            var hyoeun = $(this).index()
+
+            $('.board_box .cont_box ul').eq(hyoeun).show().siblings().hide();  
+        });
+
+
+
+
+
+
+        /* $('.h_gallery').click(function(){
+            $('.gallery').show();
+            $('.notice').hide();
+            $('.faq').hide();
+            $('.h_notice a').css({color:'#777'});
+            $('.h_faq a').css({color:'#777'});
+            $('.h_gallery a').css({color:'#000'});
+        });
+
+        $('.h_notice').click(function(){
+            $('.notice').show();
+            $('.gallery').hide();
+            $('.faq').hide();
+            $('.h_gallery a').css({color:'#777'});
+            $('.h_faq a').css({color:'#777'});
+            $('.h_notice a').css({color:'#000'});
+        });
+        
+        $('.h_faq').click(function(){
+            $('.faq').show();
+            $('.notice').hide();
+            $('.gallery').hide();
+            $('.h_gallery a').css({color:'#777'});
+            $('.h_faq a').css({color:'#000'});
+            $('.h_notice a').css({color:'#777'});
+        }); */
+
+
+    </script>
+</body>
+</html>
